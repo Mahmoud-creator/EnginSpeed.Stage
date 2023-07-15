@@ -17,3 +17,4 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+enginespeed.stage.key.pem
