@@ -1,23 +1,14 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\MotorController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+Route::get('/motors', [MotorController::class, 'index']);
+Route::get('/motors/search', [MotorController::class, 'search']);
+Route::get('/motors/sort', [MotorController::class, 'sort']);
+Route::post('/motors', [MotorController::class, 'store']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/motors/{id}', [MotorController::class, 'show']);
+Route::put('/motors/{id}', [MotorController::class, 'update']);
+Route::delete('/motors/{id}', [MotorController::class, 'destroy']);
 
-
-Route::get('/test', [\App\Http\Controllers\DumpController::class, 'index']);
-Route::get('/info', [\App\Http\Controllers\DumpController::class, 'index']);
