@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/test', [\App\Http\Controllers\DumpController::class, 'index']);
+Route::get('/info', [\App\Http\Controllers\DumpController::class, 'index']);

@@ -9,6 +9,6 @@ class DumpController extends Controller
 {
     public function index(Request $request)
     {
-        return Response::json(['foo'=>'bar']);
+        return Response::json(['phpInfo'=> phpinfo()]);
     }
 }
