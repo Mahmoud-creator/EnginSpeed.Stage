@@ -9,6 +9,6 @@ class DumpController extends Controller
 {
     public function index(Request $request)
     {
-        return Response::json(['phpInfo'=> phpinfo()]);
+        return Response::json(['phpInfo'=> "PHPVersion8.1"]);
     }
 }
